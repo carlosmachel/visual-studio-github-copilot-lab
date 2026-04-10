@@ -1,19 +1,19 @@
-# Part 00: Exploring the Codebase with GitHub Copilot Chat
+# Parte 00: Explorando o Código com GitHub Copilot Chat
 
-GitHub Copilot Chat allows you to ask questions about your code and get intelligent responses.
+O GitHub Copilot Chat permite que você faça perguntas sobre seu código e receba respostas inteligentes.
 
-1. [] Open the solution in Visual Studio 2026 if it is not already open.
-1. Click on the GitHub Copilot Chat in the top-right corner of Visual Studio and select **Open Chat Window** or press `Ctrl+\+C` if Copilot chat isn't open.
-   ![Open chat window dialog](./images/1-open-copilot-chat.png)
-1. [] Ensure that you are in **Ask** mode by clicking on the **Ask** tab at the bottom of the chat window.
-   ![Ask mode tab](./images/0-ask-mode.png)
-1. [] Try asking questions about the project structure:
+1. [] Abra a solução no Visual Studio 2026, se ainda não estiver aberta.
+1. Clique no GitHub Copilot Chat no canto superior direito do Visual Studio e selecione **Open Chat Window** ou pressione `Ctrl+\+C` se o chat do Copilot não estiver aberto.
+   ![Diálogo para abrir a janela de chat](./images/1-open-copilot-chat.png)
+1. [] Certifique-se de que você está no modo **Ask** clicando na aba **Ask** na parte inferior da janela de chat.
+   ![Aba do modo Ask](./images/0-ask-mode.png)
+1. [] Tente fazer perguntas sobre a estrutura do projeto:
    - `What projects are in this solution and how do things work together?`
    - `How does the Products API work?`
-1. [] Notice how Copilot analyzes your codebase to provide contextual answers.
+1. [] Observe como o Copilot analisa seu código para fornecer respostas contextuais.
 
-**Key Takeaway**: GitHub Copilot Chat helps you understand unfamiliar codebases by answering questions about the project structure, architecture, and implementation details.
+**Conclusão Principal**: O GitHub Copilot Chat ajuda você a entender bases de código desconhecidas, respondendo perguntas sobre a estrutura do projeto, arquitetura e detalhes de implementação.
 
 ---
 
-[Next: Part 01 - Code Completion with Ghost Text](./part01-code-completion.md)
+[Próximo: Parte 01 - Completação de Código com Ghost Text](./part01-code-completion.md)

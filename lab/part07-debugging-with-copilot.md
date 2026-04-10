@@ -1,46 +1,46 @@
-# Part 07: Debugging with Copilot
+# Parte 07: Depurando com o Copilot
 
-In this section, you'll learn how to use Copilot to debug an exception in your application.
+Nesta seção, você aprenderá como usar o Copilot para depurar uma exceção na sua aplicação.
 
-1. [] Debug the **AppHost** project if it isn't yet, and open the **store** from the .NET Aspire dashboard.
-1. [] Click on the **Go to About** button in the navigation menu.
-1. [] Observe that an exception occurs, and the application crashes.
-1. [] Press the **Analyze with Copilot** option in the pop up.
+1. [] Depure o projeto **AppHost** se ainda não estiver em execução e abra a **store** pelo painel do .NET Aspire.
+1. [] Clique no botão **Go to About** no menu de navegação.
+1. [] Observe que uma exceção ocorre e a aplicação trava.
+1. [] Pressione a opção **Analyze with Copilot** no pop-up.
 
-    ![Pop up for exception with Analyze with Copilot option](./images/7-ask-copilot-exception.png)
+    ![Pop-up de exceção com a opção Analyze with Copilot](./images/7-ask-copilot-exception.png)
 
-1. [] Review how Copilot brings in debugger information, including stack traces and variable states.
-1. [] Note how Copilot recommends a fix for the issue or provides code suggestions to resolve it.
+1. [] Observe como o Copilot traz informações do depurador, incluindo rastreamentos de pilha e estados de variáveis.
+1. [] Note como o Copilot recomenda uma correção para o problema ou fornece sugestões de código para resolvê-lo.
 
-**Key Takeaway**: Copilot can assist in diagnosing and fixing exceptions by analyzing debugger information and providing actionable recommendations.
+**Conclusão Principal**: O Copilot pode ajudar a diagnosticar e corrigir exceções analisando informações do depurador e fornecendo recomendações práticas.
 
-## Using Watch Windows and Visualizers
+## Usando Janelas de Observação e Visualizadores
 
-In this subsection, you'll learn how to use Copilot to analyze variables using watch windows and visualizers.
+Nesta subseção, você aprenderá como usar o Copilot para analisar variáveis usando janelas de observação e visualizadores.
 
-1. [] Open the **Products.razor** file again from the **Products** project.
-1. [] Add a breakpoint at the end of the **OnInitializedAsync** method.
-1. [] Debug the **TinyShop.AppHost** and open the **store** from the .NET Aspire dashboard, and navigate to the **Products** page.
-1. [] When the breakpoint is hit, hover over the **imagePrefix** variable.
-1. [] Press the **Copilot** button to analyze the **imagePrefix** variable.
+1. [] Abra o arquivo **Products.razor** novamente no projeto **Products**.
+1. [] Adicione um ponto de interrupção no final do método **OnInitializedAsync**.
+1. [] Depure o **TinyShop.AppHost** e abra a **store** pelo painel do .NET Aspire e navegue até a página **Products**.
+1. [] Quando o ponto de interrupção for atingido, passe o mouse sobre a variável **imagePrefix**.
+1. [] Pressione o botão **Copilot** para analisar a variável **imagePrefix**.
 
-    ![Copilot button on variable](./images/7-inspect-variable.png)
+    ![Botão Copilot na variável](./images/7-inspect-variable.png)
 
-    >Note: you can also see these in the Locals or watch windows
+    >Nota: você também pode ver isso nas janelas Locals ou watch
 
-1. [] Observe how Copilot provides detailed information about the variable, including its value and potential issues.
-1. [] Hover over the **products** collection and click the **View** button with the magnifier icon.
+1. [] Observe como o Copilot fornece informações detalhadas sobre a variável, incluindo seu valor e possíveis problemas.
+1. [] Passe o mouse sobre a coleção **products** e clique no botão **View** com o ícone de lupa.
 
-    ![View button on products](./images/7-view-products.png)
+    ![Botão View nos produtos](./images/7-view-products.png)
 
-1. [] Use the visualizer to inspect the contents of the **products** collection.
-1. [] Click the Generate expression button and, in natural language, type:  `Products that have the name outdoor in them and are under 40 dollars`
-1. [] Observe how Copilot generates the appropriate expression automatically.
+1. [] Use o visualizador para inspecionar o conteúdo da coleção **products**.
+1. [] Clique no botão Generate expression e, em linguagem natural, digite: `Products that have the name outdoor in them and are under 40 dollars`
+1. [] Observe como o Copilot gera a expressão apropriada automaticamente.
 
-    ![Generate expression for visualizer](./images/7-visualizer-sparkle.png)
+    ![Gerar expressão para o visualizador](./images/7-visualizer-sparkle.png)
 
-**Key Takeaway**: Copilot can enhance debugging by providing detailed insights into variables through watch windows and visualizers. Copilot can simplify complex debugging tasks by generating expressions and LINQ queries based on natural language input.
+**Conclusão Principal**: O Copilot pode aprimorar a depuração fornecendo informações detalhadas sobre variáveis por meio de janelas de observação e visualizadores. O Copilot pode simplificar tarefas complexas de depuração gerando expressões e consultas LINQ com base em entrada em linguagem natural.
 
 ---
 
-[Back: Part 06 - Using Copilot Vision](./part06-copilot-vision.md) | [Next: Part 08 - Commit Summary Descriptions](./part08-commit-summary-descriptions.md)
+[Voltar: Parte 06 - Usando o Copilot Vision](./part06-copilot-vision.md) | [Próximo: Parte 08 - Descrições de Resumo de Commits](./part08-commit-summary-descriptions.md)

@@ -1,40 +1,40 @@
-# Part 12: Delegate to the Cloud
+# Parte 12: Delegar para a Nuvem
 
-Sometimes you have an idea for a feature or improvement that you want to implement, but you don't have the time to work on it right now. GitHub Copilot's Cloud Agent allows you to delegate tasks to run in the cloud, freeing you to focus on other work while Copilot implements the changes.
+Às vezes você tem uma ideia para uma funcionalidade ou melhoria que deseja implementar, mas não tem tempo para trabalhar nisso agora. O Agente na Nuvem do GitHub Copilot permite que você delegue tarefas para executar na nuvem, liberando você para se concentrar em outros trabalhos enquanto o Copilot implementa as alterações.
 
-In this part, you'll learn how to delegate a task to the cloud to add a dark theme to the TinyShop application.
+Nesta parte, você aprenderá como delegar uma tarefa para a nuvem para adicionar um tema escuro à aplicação TinyShop.
 
-## Understanding Cloud Delegation
+## Entendendo a Delegação para a Nuvem
 
-Cloud Agent allows you to:
-- Submit complex tasks to run in the cloud
-- Continue working on other tasks while the cloud agent implements your request
-- Review and apply the changes when the task is complete
-- Get notified when the work is done
+O Agente na Nuvem permite que você:
+- Envie tarefas complexas para execução na nuvem
+- Continue trabalhando em outras tarefas enquanto o agente na nuvem implementa sua solicitação
+- Revise e aplique as alterações quando a tarefa estiver concluída
+- Receba notificações quando o trabalho estiver pronto
 
-This is particularly useful for:
-- Large refactoring tasks
-- Adding new features that require changes across multiple files
-- Time-consuming implementations that don't need your immediate attention
+Isso é particularmente útil para:
+- Grandes tarefas de refatoração
+- Adição de novas funcionalidades que requerem alterações em vários arquivos
+- Implementações demoradas que não precisam da sua atenção imediata
 
-## Preparing Your Request
+## Preparando sua Solicitação
 
-Before delegating to the cloud, it's important to write a clear, detailed prompt. The cloud agent doesn't have access to your immediate context, so your prompt should include all necessary information.
+Antes de delegar para a nuvem, é importante escrever um prompt claro e detalhado. O agente na nuvem não tem acesso ao seu contexto imediato, então seu prompt deve incluir todas as informações necessárias.
 
-1. [] Think about the feature you want to implement. For this lab, we'll add a dark theme to the TinyShop application.
+1. [] Pense na funcionalidade que você quer implementar. Para este laboratório, adicionaremos um tema escuro à aplicação TinyShop.
 
-1. [] Consider what details the cloud agent will need:
-   - What colors should the dark theme use?
-   - Should it include a toggle for users to switch themes?
-   - Where should theme styles be placed?
-   - Should the theme preference be persisted?
+1. [] Considere quais detalhes o agente na nuvem precisará:
+   - Quais cores o tema escuro deve usar?
+   - Deve incluir um botão para os usuários alternarem entre temas?
+   - Onde os estilos do tema devem ser colocados?
+   - A preferência de tema deve ser persistida?
 
-## Delegating to the Cloud
+## Delegando para a Nuvem
 
-1. [] Open Copilot Chat and switch to **Agent** mode.
+1. [] Abra o Copilot Chat e mude para o modo **Agent**.
 
 
-1. [] Enter a detailed prompt for the dark theme feature:
+1. [] Insira um prompt detalhado para a funcionalidade de tema escuro:
 
    ```
    Add a dark theme to the TinyShop Blazor application with the following requirements:
@@ -64,43 +64,43 @@ Before delegating to the cloud, it's important to write a clear, detailed prompt
       - Buttons and form elements
    ```
 
-1. [] Review the prompt to ensure it includes all necessary details.
-1. [] Click on the **Send to Copilot Coding Agent** button (cloud icon) at the bottom of the chat window.
+1. [] Revise o prompt para garantir que inclui todos os detalhes necessários.
+1. [] Clique no botão **Send to Copilot Coding Agent** (ícone de nuvem) na parte inferior da janela de chat.
 
-   ![Delegate to Cloud button](./images/12-delegate-cloud.png)
-1. The cloud agent will acknowledge the request and begin processing it.
-1. [] You will be prompted to confirm the delegation and create an issue. Click **Confirm** to proceed.
-1. [] After the issue has been created you will be able to view the pull request for the changes in in Visual Studio or on GitHub.
-  ![View Pull Request](./images/12-view-pull-request.png)
+   ![Botão Delegar para a Nuvem](./images/12-delegate-cloud.png)
+1. O agente na nuvem reconhecerá a solicitação e começará a processá-la.
+1. [] Você será solicitado a confirmar a delegação e criar uma issue. Clique em **Confirm** para prosseguir.
+1. [] Após a issue ser criada, você poderá ver o pull request para as alterações no Visual Studio ou no GitHub.
+  ![Ver Pull Request](./images/12-view-pull-request.png)
 
-1. When viewing on GitHub, you can see the proposed changes in the pull request, and view the session to see it in realtime.
+1. Ao visualizar no GitHub, você pode ver as alterações propostas no pull request e visualizar a sessão para acompanhar em tempo real.
 
 
-## While the Task Runs
+## Enquanto a Tarefa Está em Execução
 
-After submitting, you'll see a confirmation that your task has been delegated. You can:
+Após o envio, você verá uma confirmação de que sua tarefa foi delegada. Você pode:
 
-1. [] Continue working on other tasks in Visual Studio.
-1. [] Check the status of your cloud task in the pull request window.
-1. [] Receive a notification when the task is complete.
+1. [] Continuar trabalhando em outras tarefas no Visual Studio.
+1. [] Verificar o status da sua tarefa na nuvem na janela do pull request.
+1. [] Receber uma notificação quando a tarefa estiver concluída.
 
 > [!TIP]
-> Cloud Agent tasks typically take several minutes to complete, depending on the complexity of the request. 
+> As tarefas do Agente na Nuvem geralmente levam vários minutos para serem concluídas, dependendo da complexidade da solicitação.
 
 
-## Testing the Dark Theme
+## Testando o Tema Escuro
 
-1. [] Once the cloud agent has completed the task, review the changes in the pull request and checkout the branch that the changes were made on.
-1. [] Run the application with F5 or Debug -> Start Debugging.
-1. [] Click the theme toggle button in the navigation bar.
-1. [] Verify that the dark theme is applied correctly.
-1. [] Refresh the page and verify the theme preference is persisted.
-1. [] Switch back to light theme and verify it works both ways.
+1. [] Assim que o agente na nuvem tiver concluído a tarefa, revise as alterações no pull request e faça o checkout do branch onde as alterações foram feitas.
+1. [] Execute o aplicativo com F5 ou Debug -> Start Debugging.
+1. [] Clique no botão de alternância de tema na barra de navegação.
+1. [] Verifique se o tema escuro é aplicado corretamente.
+1. [] Atualize a página e verifique se a preferência de tema é mantida.
+1. [] Mude de volta para o tema claro e verifique se funciona nos dois sentidos.
 
-**Key Takeaway**: Delegating to the Cloud lets you offload complex tasks to GitHub Copilot while you focus on other work. This is especially valuable for time-consuming implementations or when you want to explore ideas without blocking your immediate workflow.
+**Conclusão Principal**: Delegar para a Nuvem permite que você transfira tarefas complexas para o GitHub Copilot enquanto se concentra em outros trabalhos. Isso é especialmente valioso para implementações demoradas ou quando você quer explorar ideias sem bloquear seu fluxo de trabalho imediato.
 
 ---
 
-🎉 **Congratulations!** You've completed all 13 parts of the workshop!
+🎉 **Parabéns!** Você completou todas as 13 partes do workshop!
 
-[Back: Part 11 - Reusable Prompt Files](./part11-reusable-prompts.md) | [🎊 Complete Workshop!](complete.html)
+[Voltar: Parte 11 - Arquivos de Prompt Reutilizáveis](./part11-reusable-prompts.md) | [🎊 Workshop Concluído!](complete.html)

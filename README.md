@@ -2,52 +2,52 @@
 <img src="img/banner.jpg" alt="decorative banner" width="1200"/>
 </p>
 
-# LAB300 - Hands-on with GitHub Copilot in Visual Studio 2026
+# LAB300 - Prática com GitHub Copilot no Visual Studio 2026
 
 [![Workshop Site](https://img.shields.io/badge/Workshop-Site-blueviolet?style=for-the-badge)](https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?style=for-the-badge&logo=github)](https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/)
 
-> **🚀 [Start the Workshop](https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/)** - Interactive themed workshop guide with all steps and documentation.
+> **🚀 [Iniciar o Workshop](https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/)** - Guia interativo do workshop com todos os passos e documentação.
 
-This lab will guide you through using GitHub Copilot's various features in Visual Studio 2026. You'll start with a partially completed TinyShop application and use GitHub Copilot to complete missing features and enhance the application.
+Este laboratório irá guiá-lo pelo uso dos diversos recursos do GitHub Copilot no Visual Studio 2026. Você começará com uma aplicação TinyShop parcialmente concluída e usará o GitHub Copilot para completar funcionalidades ausentes e aprimorar a aplicação.
 
-## Prerequisites
+## Pré-requisitos
 
-- Visual Studio 2026 with GitHub Copilot extension installed
+- Visual Studio 2026 com a extensão GitHub Copilot instalada
 - .NET 10 SDK
-- GitHub account with Copilot subscription (including Free)
+- Conta no GitHub com assinatura do Copilot (incluindo a versão gratuita)
 
-## Lab Overview
+## Visão Geral do Laboratório
 
-The TinyShop application consists of two main projects:
-- A backend API built with .NET Minimal APIs
-- A frontend Blazor Server application
+A aplicação TinyShop é composta por dois projetos principais:
+- Uma API backend construída com .NET Minimal APIs
+- Uma aplicação frontend Blazor Server
 
-You'll use GitHub Copilot's various features to enhance and complete this application.
+Você usará os diversos recursos do GitHub Copilot para aprimorar e completar esta aplicação.
 
-## Lab Parts
+## Partes do Laboratório
 
-0. [Setup](lab/setup.md)
-1. [Exploring the Codebase with GitHub Copilot Chat](lab/part00-exploring-codebase.md)
-2. [Code Completion with Ghost Text](lab/part01-code-completion.md)
-3. [Enhancing UI with Inline Chat](lab/part02-enhancing-ui.md)
-4. [Referencing Code Files in Chat](lab/part03-referencing-files.md)
-5. [Using Custom Instructions](lab/part04-custom-instructions.md)
-6. [Implementing Features with Copilot Agent](lab/part05-implementing-features.md)
-7. [Using Copilot Vision](lab/part06-copilot-vision.md)
-8. [Debugging with Copilot](lab/part07-debugging-with-copilot.md)
-9. [Commit Summary Descriptions](lab/part08-commit-summary-descriptions.md)
-10. [MCP Servers](lab/part09-mcp.md)
-11. [Planning Mode in Agent](lab/part10-planning-mode.md)
-12. [Reusable Prompt Files](lab/part11-reusable-prompts.md)
-13. [Delegate to the Cloud](lab/part12-delegate-to-cloud.md)
+0. [Configuração](lab/setup.md)
+1. [Explorando o Código com GitHub Copilot Chat](lab/part00-exploring-codebase.md)
+2. [Completação de Código com Ghost Text](lab/part01-code-completion.md)
+3. [Aprimorando a Interface com Inline Chat](lab/part02-enhancing-ui.md)
+4. [Referenciando Arquivos de Código no Chat](lab/part03-referencing-files.md)
+5. [Usando Instruções Personalizadas](lab/part04-custom-instructions.md)
+6. [Implementando Funcionalidades com o Agente Copilot](lab/part05-implementing-features.md)
+7. [Usando o Copilot Vision](lab/part06-copilot-vision.md)
+8. [Depurando com o Copilot](lab/part07-debugging-with-copilot.md)
+9. [Descrições de Resumo de Commits](lab/part08-commit-summary-descriptions.md)
+10. [Servidores MCP](lab/part09-mcp.md)
+11. [Modo de Planejamento no Agente](lab/part10-planning-mode.md)
+12. [Arquivos de Prompt Reutilizáveis](lab/part11-reusable-prompts.md)
+13. [Delegar para a Nuvem](lab/part12-delegate-to-cloud.md)
 
-**Key Takeaway**: These tools can significantly boost your productivity as a developer by automating repetitive tasks, generating boilerplate code, and helping you implement complex features more quickly.
+**Conclusão Principal**: Essas ferramentas podem aumentar significativamente sua produtividade como desenvolvedor, automatizando tarefas repetitivas, gerando código boilerplate e ajudando você a implementar funcionalidades complexas com mais rapidez.
 
-## Session Resources 
+## Recursos da Sessão
 
-| Resources          | Links                             | Description        |
+| Recursos           | Links                             | Descrição          |
 |:-------------------|:----------------------------------|:-------------------|
-| 🌐 Workshop Site | https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/ | Interactive themed workshop with all steps |
-| Build session page | https://build.microsoft.com/sessions/LAB300 | Event session page with downloadable recording, slides, resources, and speaker bio |
-| Microsoft Learn | https://aka.ms/AAI_DevAppGitHubCop_Plan | Official Collection or Plan with skilling resources to learn at your own pace |
+| 🌐 Site do Workshop | https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/ | Workshop interativo com todos os passos |
+| Página da sessão Build | https://build.microsoft.com/sessions/LAB300 | Página do evento com gravação para download, slides, recursos e biografia dos palestrantes |
+| Microsoft Learn | https://aka.ms/AAI_DevAppGitHubCop_Plan | Coleção ou Plano oficial com recursos de aprendizado para estudar no seu próprio ritmo |
