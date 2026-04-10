@@ -608,11 +608,14 @@
             }
         }
 
+        // Track which base path worked for fetching markdown
+        let markdownBasePath = 'lab/';
+
         // Process markdown - fix image paths and handle special syntax
         function processMarkdown(md) {
-            // Fix image paths - images are in lab/images/
-            md = md.replace(/!\[([^\]]*)\]\(\.\/images\//g, '![$1](lab/images/');
-            md = md.replace(/!\[([^\]]*)\]\(images\//g, '![$1](lab/images/');
+            // Fix image paths - use the same base path that worked for markdown
+            md = md.replace(/!\[([^\]]*)\]\(\.\/images\//g, `![$1](${markdownBasePath}images/`);
+            md = md.replace(/!\[([^\]]*)\]\(images\//g, `![$1](${markdownBasePath}images/`);
             
             // Convert GitHub-style checkboxes: 1. [] becomes checkbox
             md = md.replace(/^(\d+)\.\s*\[\s*\]\s*/gm, '$1. <input type="checkbox"> ');
@@ -642,8 +645,15 @@
             document.title = `${step.title} | VS GitHub Copilot Lab`;
 
             try {
-                // Fetch markdown from lab folder (copied to docs/lab during deploy)
-                const response = await fetch(`lab/${step.file}`);
+                // Try fetching from ../lab/ first (for local development)
+                // Then fall back to lab/ (for GitHub Pages deployment)
+                let response = await fetch(`../lab/${step.file}`);
+                if (response.ok) {
+                    markdownBasePath = '../lab/';
+                } else {
+                    response = await fetch(`lab/${step.file}`);
+                    markdownBasePath = 'lab/';
+                }
                 if (!response.ok) throw new Error('Failed to load');
                 
                 let md = await response.text();
