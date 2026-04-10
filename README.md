@@ -4,10 +4,10 @@
 
 # LAB300 - Prática com GitHub Copilot no Visual Studio 2026
 
-[![Workshop Site](https://img.shields.io/badge/Workshop-Site-blueviolet?style=for-the-badge)](https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?style=for-the-badge&logo=github)](https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/)
+[![Workshop Site](https://img.shields.io/badge/Workshop-Site-blueviolet?style=for-the-badge)](https://carlosmachel.github.io/visual-studio-github-copilot-lab/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?style=for-the-badge&logo=github)](https://carlosmachel.github.io/visual-studio-github-copilot-lab/)
 
-> **🚀 [Iniciar o Workshop](https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/)** - Guia interativo do workshop com todos os passos e documentação.
+> **🚀 [Iniciar o Workshop](https://carlosmachel.github.io/visual-studio-github-copilot-lab/)** - Guia interativo do workshop com todos os passos e documentação.
 
 Este laboratório irá guiá-lo pelo uso dos diversos recursos do GitHub Copilot no Visual Studio 2026. Você começará com uma aplicação TinyShop parcialmente concluída e usará o GitHub Copilot para completar funcionalidades ausentes e aprimorar a aplicação.
 
@@ -48,6 +48,6 @@ Você usará os diversos recursos do GitHub Copilot para aprimorar e completar e
 
 | Recursos           | Links                             | Descrição          |
 |:-------------------|:----------------------------------|:-------------------|
-| 🌐 Site do Workshop | https://dotnet-presentations.github.io/visual-studio-github-copilot-lab/ | Workshop interativo com todos os passos |
+| 🌐 Site do Workshop | https://carlosmachel.github.io/visual-studio-github-copilot-lab/ | Workshop interativo com todos os passos |
 | Página da sessão Build | https://build.microsoft.com/sessions/LAB300 | Página do evento com gravação para download, slides, recursos e biografia dos palestrantes |
 | Microsoft Learn | https://aka.ms/AAI_DevAppGitHubCop_Plan | Coleção ou Plano oficial com recursos de aprendizado para estudar no seu próprio ritmo |
