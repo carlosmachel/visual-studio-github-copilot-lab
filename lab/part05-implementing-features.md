@@ -1,42 +1,42 @@
-# Part 05: Implementing Features with Copilot Agent
+# Parte 05: Implementando Funcionalidades com o Agente Copilot
 
-Previously we utilized Copilot Chat, which is great for working with an individual file or asking questions about our code. However, many updates necessitate changes to multiple files throughout a codebase. Even a seemingly basic change to a webpage likely requires updating HTML, CSS, Razor, and C# files. Copilot Agent allows you to modify multiple files at once across your project, self heals, and can run commands if granted permission like installing NuGet packages.
+Anteriormente utilizamos o Copilot Chat, que é ótimo para trabalhar com um arquivo individual ou fazer perguntas sobre nosso código. No entanto, muitas atualizações exigem alterações em vários arquivos de uma base de código. Até mesmo uma mudança aparentemente simples em uma página web provavelmente requer atualizar arquivos HTML, CSS, Razor e C#. O Agente Copilot permite que você modifique vários arquivos de uma vez em todo o seu projeto, faz autocorreção e pode executar comandos se tiver permissão, como instalar pacotes NuGet.
 
-With Copilot Agent, you will add the files which need to be updated to the context. Once you provide the prompt, Copilot Agent will begin the updates across all files in the context. It also has the ability to create new files or add files to the context as it deems appropriate.
+Com o Agente Copilot, você adicionará os arquivos que precisam ser atualizados ao contexto. Depois que você fornecer o prompt, o Agente Copilot começará as atualizações em todos os arquivos no contexto. Ele também tem a capacidade de criar novos arquivos ou adicionar arquivos ao contexto conforme julgar apropriado.
 
-Let's add the ability to see a list of images into the app:
+Vamos adicionar a capacidade de ver uma lista de imagens no aplicativo:
 
-1. [] Open GitHub Copilot Chat in the top-right corner of Visual Studio and select **Open Chat Window** or press `Ctrl+\+C` if Copilot chat isn't open.
+1. [] Abra o GitHub Copilot Chat no canto superior direito do Visual Studio e selecione **Open Chat Window** ou pressione `Ctrl+\+C` se o chat do Copilot não estiver aberto.
 
-1. [] Switch to **Agent** mode.
+1. [] Mude para o modo **Agent**.
 
-   ![Switch to agent mode](./images/1-agent.png)
+   ![Mudar para o modo agente](./images/1-agent.png)
 
-1. [] In Visual Studio, open a new Copilot Chat with the **+** chat icon.
+1. [] No Visual Studio, abra um novo Copilot Chat com o ícone **+** do chat.
 
-    ![New chat icon in VS copilot](./images/5-new-edits.png)
+    ![Ícone de novo chat no VS Copilot](./images/5-new-edits.png)
 
-1. [] At the bottom of the GitHub Copilot Chat pane, select the model (default is "GPT-4o") from the dropdown list, and select **Claude Opus 4.5** from the list of available models.
+1. [] Na parte inferior do painel do GitHub Copilot Chat, selecione o modelo (o padrão é "GPT-4o") na lista suspensa e selecione **Claude Opus 4.5** na lista de modelos disponíveis.
 
-    ![Select Opus in Copilot](./images/5-select-sonnet.png)
+    ![Selecionar Opus no Copilot](./images/5-select-sonnet.png)
 
-1. [] Type: `Implement a simple product listing page in Products.razor that fetches products from #ProductService and displays them in a simple list with product name, description, price, and image.`
+1. [] Digite: `Implement a simple product listing page in Products.razor that fetches products from #ProductService and displays them in a simple list with product name, description, price, and image.`
 
-    > NOTE: You should use your own phrasing when generating the prompt. As highlighted previously, part of the exercise is to become comfortable creating prompts for GitHub Copilot. One key tip is it's always good to provide more guidance to ensure you get the code you are looking for.
+    > NOTA: Você deve usar suas próprias palavras ao gerar o prompt. Como destacado anteriormente, parte do exercício é ficar confortável criando prompts para o GitHub Copilot. Uma dica importante: é sempre bom fornecer mais orientação para garantir que você obtenha o código que está procurando.
 
-    > NOTE: If you are asked to **Enable Claude Opus 4.5 for all clients** click on **Enable** button.
+    > NOTA: Se for perguntado para **Enable Claude Opus 4.5 for all clients** clique no botão **Enable**.
 
-Copilot agent mode begins implementing the code suggestions!
+O modo agente do Copilot começa a implementar as sugestões de código!
 
-## Reviewing the changes
+## Revisando as alterações
 
-Unlike our prior examples where we worked with an individual file, we're now working with changes across multiple files - and maybe multiple sections of multiple files. Fortunately, Copilot Agent has functionality to help streamline this process.
+Ao contrário dos nossos exemplos anteriores em que trabalhamos com um arquivo individual, agora estamos trabalhando com alterações em vários arquivos — e talvez em várias seções de múltiplos arquivos. Felizmente, o Agente Copilot tem funcionalidades para ajudar a simplificar este processo.
 
-GitHub Copilot will propose the following changes to the application including updating the Products.razor and adding a Products.razor.css and maybe more.
+O GitHub Copilot irá propor as seguintes alterações no aplicativo, incluindo a atualização do Products.razor e a adição de um Products.razor.css e possivelmente mais.
 
-1. [] Review the code changes from Agent mode
+1. [] Revise as alterações de código do modo Agent
 
-    The code should look similar to the following:
+    O código deve ser semelhante ao seguinte:
     ```html
     <table class="table">
         <thead>
@@ -61,12 +61,12 @@ GitHub Copilot will propose the following changes to the application including u
     </table>
     ```
 
-    The **ProductService* should have been injected at the top of the file:
+    O **ProductService** deve ter sido injetado no topo do arquivo:
     ```html
     @inject ProductService ProductService
     ```
 
-    The code should have been updated at the bottom of the file:
+    O código deve ter sido atualizado na parte inferior do arquivo:
     ```cs
         @code {
         private List<Product>? products;
@@ -82,12 +82,12 @@ GitHub Copilot will propose the following changes to the application including u
     }
     ```
 
-1. [] Run the application to see your new product listing page.
+1. [] Execute o aplicativo para ver sua nova página de listagem de produtos.
 
-1. [] Stop debugging and close the application
+1. [] Pare a depuração e feche o aplicativo
 
-**Key Takeaway**: Copilot Agent can generate complete feature implementations based on your natural language descriptions, saving significant development time.
+**Conclusão Principal**: O Agente Copilot pode gerar implementações completas de funcionalidades com base em suas descrições em linguagem natural, economizando um tempo significativo de desenvolvimento.
 
 ---
 
-[Back: Part 04 - Using Custom Instructions](./part04-custom-instructions.md) | [Next: Part 06 - Using Copilot Vision](./part06-copilot-vision.md)
+[Voltar: Parte 04 - Usando Instruções Personalizadas](./part04-custom-instructions.md) | [Próximo: Parte 06 - Usando o Copilot Vision](./part06-copilot-vision.md)

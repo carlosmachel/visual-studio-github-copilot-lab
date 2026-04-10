@@ -1,29 +1,29 @@
-# Part 04: Using Custom Instructions
+# Parte 04: Usando Instruções Personalizadas
 
-There are always key pieces of information anyone generating code for your codebase needs to know - the technologies in use, coding standards to follow, project structure, etc. Since context is so important, as we've discussed, we likely want to ensure Copilot always has this information as well. Fortunately, we can provide this overview through the use of Copilot instructions.
+Sempre há informações essenciais que qualquer pessoa gerando código para sua base de código precisa saber — as tecnologias em uso, os padrões de codificação a seguir, a estrutura do projeto, etc. Como o contexto é tão importante, como discutimos, provavelmente queremos garantir que o Copilot sempre tenha essas informações. Felizmente, podemos fornecer essa visão geral por meio do uso de instruções do Copilot.
 
-Before we begin larger updates to the site with the help of Copilot, we want to ensure Copilot has a good understanding of how we're building our application. As a result, we're going to add a Copilot instructions file to the repository.
+Antes de começarmos atualizações maiores no site com a ajuda do Copilot, queremos garantir que o Copilot tenha uma boa compreensão de como estamos construindo nossa aplicação. Por isso, vamos adicionar um arquivo de instruções do Copilot ao repositório.
 
-Copilot instructions is a markdown file placed in your **.github** folder. It becomes part of your project, and in turn is available to all contributors to your codebase. You can use this file to indicate various coding standards you wish to follow, the technologies your project uses, or anything else important for Copilot Chat to understand when generating suggestions.
+As instruções do Copilot são um arquivo markdown colocado na sua pasta **.github**. Ele se torna parte do seu projeto e, por sua vez, está disponível para todos os contribuidores da sua base de código. Você pode usar este arquivo para indicar vários padrões de codificação que deseja seguir, as tecnologias que seu projeto usa, ou qualquer outra coisa importante para o Copilot Chat entender ao gerar sugestões.
 
 > [!IMPORTANT]
-> The *copilot-instructions.md* file is included in **every** call to GitHub Copilot Chat, and will be part of the context sent to Copilot. Because there is always a limited set of tokens an LLM can operate on, a large Copilot instructions file can obscure relevant information. As such, you should limit your Copilot instructions file to project-wide information, providing an overview of what you're building and how you're building it. If you need to provide more specific information for particular tasks, you can create [prompt files](https://docs.github.com/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot?tool=vscode#about-prompt-files).
+> O arquivo *copilot-instructions.md* é incluído em **cada** chamada ao GitHub Copilot Chat e fará parte do contexto enviado ao Copilot. Como sempre há um conjunto limitado de tokens que um LLM pode operar, um arquivo de instruções grande pode obscurecer informações relevantes. Por isso, você deve limitar seu arquivo de instruções a informações de âmbito global do projeto, fornecendo uma visão geral do que você está construindo e como está construindo. Se precisar fornecer informações mais específicas para tarefas particulares, você pode criar [arquivos de prompt](https://docs.github.com/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot?tool=vscode#about-prompt-files).
 
-Here are some guidelines to consider when creating a Copilot instructions file:
+Aqui estão algumas diretrizes a considerar ao criar um arquivo de instruções do Copilot:
 
-- The Copilot instructions file becomes part of the project, meaning it will apply to every developer; anything indicated in the file should be globally applicable.
-- The file is markdown, so you can take advantage of that fact by grouping content together to improve readability.
-- Provide an overview of **what** you are building and **how** you are building it, including:
-    - languages, frameworks and libraries in use.
-    - required assets to be generated (such as unit tests) and where they should be placed.
-    - any language specific rules
-- If you notice GitHub Copilot consistently provides an unexpected suggestion (e.g. using class components for React), add those notes to the instructions file.
+- O arquivo de instruções do Copilot se torna parte do projeto, ou seja, se aplicará a todos os desenvolvedores; qualquer coisa indicada no arquivo deve ser globalmente aplicável.
+- O arquivo é markdown, então você pode aproveitar isso agrupando conteúdo para melhorar a legibilidade.
+- Forneça uma visão geral do **que** você está construindo e **como** está construindo, incluindo:
+    - linguagens, frameworks e bibliotecas em uso.
+    - ativos necessários a serem gerados (como testes unitários) e onde devem ser colocados.
+    - quaisquer regras específicas de linguagem
+- Se você notar que o GitHub Copilot fornece consistentemente uma sugestão inesperada (por exemplo, usando componentes de classe para React), adicione essas notas ao arquivo de instruções.
 
-## Create a Copilot instructions file
+## Criar um arquivo de instruções do Copilot
 
-1. [] In the **Solution Explorer**, expand the **GitHub Node** and open **copilot-instructions.md**
+1. [] No **Solution Explorer**, expanda o **GitHub Node** e abra **copilot-instructions.md**
 
-1. [] Add project-specific information about your application:
+1. [] Adicione informações específicas do projeto sobre sua aplicação:
 
     ```markdown
     ### Backend
@@ -38,17 +38,17 @@ Here are some guidelines to consider when creating a Copilot instructions file:
     - UI should have a modern look and feel.
     - CSS should be in .razor.css files.
     ```
-1. Start a new chat by clicking the `+` icon in the top right corner of the chat window.
+1. Inicie um novo chat clicando no ícone `+` no canto superior direito da janela de chat.
 
-   ![New chat](./images/5-new-edits.png)
+   ![Novo chat](./images/5-new-edits.png)
 
-1. [] Go back to Copilot Chat and re-run the prompt from Part 03, you can do this by pressing the up key. or
-1. [] Ask: `How would I implement getting and visualizing the products in a table using the code in #ProductService and the css required.`
-1. [] Review the code suggestion but don't implement it yet.
-1. [] Notice how the responses now incorporate your custom instructions.
+1. [] Volte ao Copilot Chat e re-execute o prompt da Parte 03; você pode fazer isso pressionando a tecla de seta para cima. ou
+1. [] Pergunte: `How would I implement getting and visualizing the products in a table using the code in #ProductService and the css required.`
+1. [] Revise a sugestão de código, mas não a implemente ainda.
+1. [] Observe como as respostas agora incorporam suas instruções personalizadas.
 
-**Key Takeaway**: Custom instructions make Copilot's suggestions more aligned with your project standards and architecture preferences.
+**Conclusão Principal**: As instruções personalizadas tornam as sugestões do Copilot mais alinhadas com os padrões do seu projeto e as preferências de arquitetura.
 
 ---
 
-[Back: Part 03 - Referencing Code Files in Chat](./part03-referencing-files.md) | [Next: Part 05 - Implementing Features with Copilot Agent](./part05-implementing-features.md)
+[Voltar: Parte 03 - Referenciando Arquivos de Código no Chat](./part03-referencing-files.md) | [Próximo: Parte 05 - Implementando Funcionalidades com o Agente Copilot](./part05-implementing-features.md)

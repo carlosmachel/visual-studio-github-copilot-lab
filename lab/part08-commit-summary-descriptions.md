@@ -1,29 +1,29 @@
-# Part 08: Commit Summary Descriptions
+# Parte 08: Descrições de Resumo de Commits
 
-In this section, you'll learn how to use GitHub Copilot to generate commit messages and customize them.
+Nesta seção, você aprenderá como usar o GitHub Copilot para gerar mensagens de commit e personalizá-las.
 
-1. [] Open the **Git Changes** view in Visual Studio (**View -> Git Changes**).
-1. [] Select the sparkle emoji pencil button to automatically generate a commit message using Copilot.
+1. [] Abra a visualização **Git Changes** no Visual Studio (**View -> Git Changes**).
+1. [] Selecione o botão de lápis com emoji de estrela para gerar automaticamente uma mensagem de commit usando o Copilot.
 
-   ![VS commit dialog with AI button](./images/8-commit.png)
+   ![Diálogo de commit do VS com botão de IA](./images/8-commit.png)
    
-1. [] Navigate to **Tools -> Options -> GitHub -> Copilot -> Source Control Integration**.
-1. [] Update the commit message customization setting to: `Summarize in a few sentences and then highlight the top 5 changes with emoji and short descriptions`
-1. [] Return to the **Git Changes** view and generate a new commit message.
-1. [] Observe how the new commit message reflects the updated customization.
+1. [] Navegue para **Tools -> Options -> GitHub -> Copilot -> Source Control Integration**.
+1. [] Atualize a configuração de personalização da mensagem de commit para: `Summarize in a few sentences and then highlight the top 5 changes with emoji and short descriptions`
+1. [] Volte à visualização **Git Changes** e gere uma nova mensagem de commit.
+1. [] Observe como a nova mensagem de commit reflete a personalização atualizada.
 
-**Key Takeaway**: Copilot can help you create meaningful and well-structured commit messages, saving time and improving collaboration.
+**Conclusão Principal**: O Copilot pode ajudá-lo a criar mensagens de commit significativas e bem estruturadas, economizando tempo e melhorando a colaboração.
 
-## Code Reviews with Copilot
+## Revisões de Código com o Copilot
 
-1. [] Before submitting your changes, use the **Code Review** feature to analyze your code for potential improvements and suggestions.
+1. [] Antes de enviar suas alterações, use o recurso **Code Review** para analisar seu código em busca de possíveis melhorias e sugestões.
 
-   ![Code Review Assistance toggle](./images/8-code-review.png)
+   ![Toggle de Assistência de Revisão de Código](./images/8-code-review.png)
 
-1. [] Review the suggestions provided by Copilot and apply any necessary changes if there are any.
+1. [] Revise as sugestões fornecidas pelo Copilot e aplique as alterações necessárias, se houver.
 
-**Key Takeaway**: Copilot's Code Review feature can help you identify potential issues and improve code quality before submission.
+**Conclusão Principal**: O recurso de Revisão de Código do Copilot pode ajudá-lo a identificar possíveis problemas e melhorar a qualidade do código antes da submissão.
 
 ---
 
-[Back: Part 07 - Debugging with Copilot](./part07-debugging-with-copilot.md) | [Next: Part 09 - MCP Servers](./part09-mcp.md)
+[Voltar: Parte 07 - Depurando com o Copilot](./part07-debugging-with-copilot.md) | [Próximo: Parte 09 - Servidores MCP](./part09-mcp.md)

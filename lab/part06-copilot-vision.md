@@ -1,21 +1,21 @@
-# Part 06: Using Copilot Vision
+# Parte 06: Usando o Copilot Vision
 
-In this section, you'll use Copilot Vision. You can share screenshots of errors and Copilot will interpret the image and resolve the issue. Or share mockups of new designs, and Vision will help you bring them to life. Let's update our design based on a photo our designer gave us.
+Nesta seção, você usará o Copilot Vision. Você pode compartilhar capturas de tela de erros e o Copilot irá interpretar a imagem e resolver o problema. Ou compartilhe mockups de novos designs, e o Vision ajudará você a implementá-los. Vamos atualizar nosso design com base em uma foto que nosso designer nos forneceu.
 
-1. [] Open a new Copilot Chat thread in Agent mode.
-1. [] Click the **+** button in the chat, select **upload image**, and select the **eshop.png** image found in the root of the cloned repository.
+1. [] Abra um novo thread do Copilot Chat no modo Agent.
+1. [] Clique no botão **+** no chat, selecione **upload image** e selecione a imagem **eshop.png** encontrada na raiz do repositório clonado.
 
-    ![Attach image icon](./images/6-add-image.png)
+    ![Ícone para anexar imagem](./images/6-add-image.png)
 
-1. [] Ask: `Update the Products.razor to display products in a grid layout similar to this image. Add nice hover effects and make it responsive.`
-1. [] Review the suggested code changes and implement them. It should recommend changes to both the **Products.razor** and a new **Products.razor.css**
-1. [] Run the application to see the updated product grid layout. You may have to clear the browser cache with CTRL+SHIFT+R if you don't see the CSS update.
+1. [] Pergunte: `Update the Products.razor to display products in a grid layout similar to this image. Add nice hover effects and make it responsive.`
+1. [] Revise as alterações de código sugeridas e implemente-as. Devem ser recomendadas alterações tanto no **Products.razor** quanto em um novo **Products.razor.css**
+1. [] Execute o aplicativo para ver o layout de grade de produtos atualizado. Pode ser necessário limpar o cache do navegador com CTRL+SHIFT+R se você não ver a atualização do CSS.
 
 > [!NOTE]
-> Continue to iterate with Copilot Agent if the result isn't to your liking.
+> Continue interagindo com o Agente Copilot se o resultado não for do seu agrado.
 
-**Key Takeaway**: Copilot Vision can understand UI designs from images and help you implement them in your application.
+**Conclusão Principal**: O Copilot Vision pode entender designs de UI a partir de imagens e ajudá-lo a implementá-los na sua aplicação.
 
 ---
 
-[Back: Part 05 - Implementing Features with Copilot Agent](./part05-implementing-features.md) | [Next: Part 07 - Debugging with Copilot](./part07-debugging-with-copilot.md)
+[Voltar: Parte 05 - Implementando Funcionalidades com o Agente Copilot](./part05-implementing-features.md) | [Próximo: Parte 07 - Depurando com o Copilot](./part07-debugging-with-copilot.md)

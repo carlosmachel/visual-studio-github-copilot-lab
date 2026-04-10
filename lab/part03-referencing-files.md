@@ -1,27 +1,27 @@
-# Part 03: Referencing Code Files in Chat
+# Parte 03: Referenciando Arquivos de Código no Chat
 
-In this section, you'll learn how to reference existing code files in your chat conversations.
+Nesta seção, você aprenderá como referenciar arquivos de código existentes nas suas conversas no chat.
 
-1. [] Open the **Products.razor** again from the **Store** project.
-1. [] Ensure that GitHub Copilto Chat is open by clicking on the Github Copilot Chat in the top-right corner of Visual Studio and select **Open Chat Window** or press `Ctrl+\+C` if Copilot chat isn't open.
+1. [] Abra o **Products.razor** novamente no projeto **Store**.
+1. [] Certifique-se de que o GitHub Copilot Chat está aberto clicando no ícone do Github Copilot Chat no canto superior direito do Visual Studio e selecionando **Open Chat Window** ou pressionando `Ctrl+\+C` se o chat do Copilot não estiver aberto.
 
-   ![Open chat window dialog](./images/1-open-copilot-chat.png)
+   ![Diálogo para abrir a janela de chat](./images/1-open-copilot-chat.png)
 
-1. Change the mode to `Ask`
+1. Mude o modo para `Ask`
 
-	![Change to chat](./images/3-chat.png)
+	![Mudar para chat](./images/3-chat.png)
 
-1. Start a new chat by clicking the `+` icon in the top right corner of the chat window.
+1. Inicie um novo chat clicando no ícone `+` no canto superior direito da janela de chat.
 
-   ![New chat](./images/5-new-edits.png)
+   ![Novo chat](./images/5-new-edits.png)
 
-1. [] Type: `#ProductService.cs` to reference the ProductService file.
-1. [] Ask: `How would I implement getting and visualizing the products in a table using the code in #ProductService and the css required.`
-1. [] Review the code suggestion but don't implement it yet.
-1. [] Notice how Copilot can reference existing code to provide contextual suggestions.
+1. [] Digite: `#ProductService.cs` para referenciar o arquivo ProductService.
+1. [] Pergunte: `How would I implement getting and visualizing the products in a table using the code in #ProductService and the css required.`
+1. [] Revise a sugestão de código, mas não a implemente ainda.
+1. [] Observe como o Copilot pode referenciar código existente para fornecer sugestões contextuais.
 
-**Key Takeaway**: Referencing files in your chat provides Copilot with the context it needs to give more accurate, project-specific suggestions.
+**Conclusão Principal**: Referenciar arquivos no chat fornece ao Copilot o contexto necessário para dar sugestões mais precisas e específicas do projeto.
 
 ---
 
-[Back: Part 02 - Enhancing UI with Inline Chat](./part02-enhancing-ui.md) | [Next: Part 04 - Using Custom Instructions](./part04-custom-instructions.md)
+[Voltar: Parte 02 - Aprimorando a Interface com Inline Chat](./part02-enhancing-ui.md) | [Próximo: Parte 04 - Usando Instruções Personalizadas](./part04-custom-instructions.md)

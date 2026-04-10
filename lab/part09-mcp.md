@@ -1,74 +1,74 @@
-# Part 09: MCP Servers
+# Parte 09: Servidores MCP
 
-Model Context Protocol (MCP) is an open protocol that standardizes how applications provide context to large language models (LLMs). MCP servers extend GitHub Copilot's capabilities by connecting to external tools and services, giving it access to real-time data and the ability to perform actions.
+O Model Context Protocol (MCP) é um protocolo aberto que padroniza como as aplicações fornecem contexto para grandes modelos de linguagem (LLMs). Os servidores MCP ampliam as capacidades do GitHub Copilot conectando-se a ferramentas e serviços externos, dando-lhe acesso a dados em tempo real e a capacidade de executar ações.
 
-In this part, you'll learn how to add MCP servers to Visual Studio and use them to get information about optimizing your application.
+Nesta parte, você aprenderá como adicionar servidores MCP ao Visual Studio e usá-los para obter informações sobre como otimizar sua aplicação.
 
-## Adding MCP Servers from the Gallery
+## Adicionando Servidores MCP da Galeria
 
-Visual Studio provides a gallery of pre-configured MCP servers that you can easily add to your project.
+O Visual Studio fornece uma galeria de servidores MCP pré-configurados que você pode facilmente adicionar ao seu projeto.
 
-To see your existing tools and MCP servers installed:
-1. [] Open the Copilot Chat window by clicking on the GitHub Copilot icon and selecting **Open Chat Window** or press `Ctrl+\+C`.
-1. [] Click on the **Tools** icon at the bottom of the chat window to open the MCP server configuration.
+Para ver suas ferramentas e servidores MCP instalados:
+1. [] Abra a janela do Copilot Chat clicando no ícone do GitHub Copilot e selecionando **Open Chat Window** ou pressionando `Ctrl+\+C`.
+1. [] Clique no ícone **Tools** na parte inferior da janela de chat para abrir a configuração do servidor MCP.
 
-   ![MCP Tools icon](./images/9-mcp-tools.png)
-1. Tools that are built in and from MCP servers will appear.
-1. Click the **+** icon to add a new MCP server.
+   ![Ícone de Ferramentas MCP](./images/9-mcp-tools.png)
+1. As ferramentas integradas e dos servidores MCP aparecerão.
+1. Clique no ícone **+** para adicionar um novo servidor MCP.
 1. 
-   ![Add MCP server](./images/9-add-mcp-server.png)
-1. Specify the following
+   ![Adicionar servidor MCP](./images/9-add-mcp-server.png)
+1. Especifique o seguinte
 1. **Destination**: Solution
 1. **Server Id**: `github`
 1. **Type**: HTTP
 1. **URL**: https://api.githubcopilot.com/mcp/
 
-   ![GitHub MCP server configuration](./images/9-github-mcp-server.png)
+   ![Configuração do servidor GitHub MCP](./images/9-github-mcp-server.png)
 
 
-1. The GitHub MCP requires authentication. From the **Solution Explorer**, expand **SolutionItems** and open **.mcp.json**, and you will see a **Authentication required** message. Click on it and click Authenticate. Afer this you will see that it is online and ready to use.
-   ![GitHub MCP authentication](./images/9-github-mcp-authentication.png)
+1. O GitHub MCP requer autenticação. No **Solution Explorer**, expanda **SolutionItems** e abra **.mcp.json**, e você verá uma mensagem de **Authentication required**. Clique nela e em Authenticate. Após isso você verá que está online e pronto para uso.
+   ![Autenticação do GitHub MCP](./images/9-github-mcp-authentication.png)
 
 
-Visual Studio 2026 has a built in MCP gallery to help you easily install MCP server.:
+O Visual Studio 2026 tem uma galeria MCP integrada para ajudá-lo a instalar servidores MCP facilmente:
 
-1. [] In Visual Studio 2026 go to **Extensions -> MCP Registries...** to open the MCP server management window.
+1. [] No Visual Studio 2026, vá para **Extensions -> MCP Registries...** para abrir a janela de gerenciamento de servidores MCP.
  
-   ![MCP Registries menu](./images/9-mcp-registries-menu.png)
+   ![Menu de Registros MCP](./images/9-mcp-registries-menu.png)
 
-1. [] Browse through existing MCP servers in the gallery.
+1. [] Navegue pelos servidores MCP existentes na galeria.
 
 > [!TIP]
-> MCP servers can provide access to documentation, APIs, and other services that can help Copilot give you more accurate and contextual responses.
+> Os servidores MCP podem fornecer acesso à documentação, APIs e outros serviços que podem ajudar o Copilot a fornecer respostas mais precisas e contextuais.
 
 
 
-## Using MCP Servers to Get Information
+## Usando Servidores MCP para Obter Informações
 
-Now that you have the Microsoft Learn and GitHub MCP servers installed, let's use them to get information about optimizing asset loading in the application.
+Agora que você tem os servidores MCP do Microsoft Learn e do GitHub instalados, vamos usá-los para obter informações sobre como otimizar o carregamento de ativos na aplicação.
 
-1. [] In Copilot Chat, switch to **Agent** mode. 
-1. [] Ensure that the Microsoft Learn MCP server is selected as an active tool. If you don't see it click on a new chat session or toggle modes:
-  ![Select MCP server](./images/9-select-mcp-server.png)
-1. [] Type the following prompt: `Using the Microsoft Learn docs mcp, what are the best practices for optimizing image loading and asset delivery in a Blazor Server application?`
-1. [] Review the response from Copilot, which now has access to the latest Microsoft documentation through the MCP server.
+1. [] No Copilot Chat, mude para o modo **Agent**. 
+1. [] Certifique-se de que o servidor MCP do Microsoft Learn está selecionado como uma ferramenta ativa. Se não o vir, clique em uma nova sessão de chat ou alterne os modos:
+  ![Selecionar servidor MCP](./images/9-select-mcp-server.png)
+1. [] Digite o seguinte prompt: `Using the Microsoft Learn docs mcp, what are the best practices for optimizing image loading and asset delivery in a Blazor Server application?`
+1. [] Revise a resposta do Copilot, que agora tem acesso à documentação mais recente da Microsoft através do servidor MCP.
 
-## Creating GitHub Issues with MCP
+## Criando Issues no GitHub com MCP
 
-The GitHub MCP server allows Copilot to interact with your GitHub repository. Let's use it to create issues for improvements we want to make to the application.
+O servidor GitHub MCP permite que o Copilot interaja com seu repositório no GitHub. Vamos usá-lo para criar issues com melhorias que queremos fazer na aplicação.
 
-1. [] Ensure that the GitHub MCP server is selected as an active tool in Copilot Chat.
-1. [] In the same chat session, type: `Based on the asset optimization recommendations, create 3 GitHub issues for improving the TinyShop application's performance.`
+1. [] Certifique-se de que o servidor GitHub MCP está selecionado como uma ferramenta ativa no Copilot Chat.
+1. [] Na mesma sessão de chat, digite: `Based on the asset optimization recommendations, create 3 GitHub issues for improving the TinyShop application's performance.`
 
-   > NOTE:
-   > Copilot will use the GitHub MCP server to create the issues directly in your repository. You may be prompted to authorize the action.
+   > NOTA:
+   > O Copilot usará o servidor GitHub MCP para criar as issues diretamente no seu repositório. Pode ser solicitado que você autorize a ação.
 
-1. [] Review the issues that Copilot proposes to create.
-1. [] Approve the creation of the issues when prompted.
-1. [] Navigate to your GitHub repository to verify that the issues have been created.
+1. [] Revise as issues que o Copilot propõe criar.
+1. [] Aprove a criação das issues quando solicitado.
+1. [] Navegue até o seu repositório no GitHub para verificar se as issues foram criadas.
 
-**Key Takeaway**: MCP servers extend GitHub Copilot's capabilities by connecting it to external services and documentation. This allows Copilot to provide more accurate, up-to-date information and perform actions like creating GitHub issues directly from the chat interface.
+**Conclusão Principal**: Os servidores MCP ampliam as capacidades do GitHub Copilot conectando-o a serviços externos e documentação. Isso permite que o Copilot forneça informações mais precisas e atualizadas e execute ações como criar issues no GitHub diretamente da interface de chat.
 
 ---
 
-[Back: Part 08 - Commit Summary Descriptions](./part08-commit-summary-descriptions.md) | [Next: Part 10 - Planning Mode in Agent](./part10-planning-mode.md)
+[Voltar: Parte 08 - Descrições de Resumo de Commits](./part08-commit-summary-descriptions.md) | [Próximo: Parte 10 - Modo de Planejamento no Agente](./part10-planning-mode.md)

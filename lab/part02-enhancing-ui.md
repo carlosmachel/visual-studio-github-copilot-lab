@@ -1,18 +1,18 @@
-# Part 02: Enhancing UI with Inline Chat
+# Parte 02: Aprimorando a Interface com Inline Chat
 
-Now, you'll improve the loading experience using Copilot's inline chat.
+Agora, você melhorará a experiência de carregamento usando o inline chat do Copilot.
 
-> NOTE: This exercise does supply specific prompts to type, but as part of the learning experience we encourage you to discover how to interact with Copilot. Feel free to talk in natural language, describing what you're looking for or need to accomplish.
+> NOTA: Este exercício fornece prompts específicos para digitar, mas como parte da experiência de aprendizado, encorajamos você a descobrir como interagir com o Copilot. Sinta-se à vontade para usar linguagem natural, descrevendo o que você está procurando ou precisa realizar.
 
-1. [] In the **Solution explorer** under the **Store** project open **Components/Pages/Products.razor**.
-1. [] Find the "Loading..." text in the code.
-1. [] Select this text and right-click.
-1. [] Choose "Chat" or press `Alt+/`.
-1. [] In the inline chat, type: `Update this razor to have a simple spinner style, using built in bootstrap styles.`
+1. [] No **Solution Explorer**, no projeto **Store**, abra **Components/Pages/Products.razor**.
+1. [] Encontre o texto "Loading..." no código.
+1. [] Selecione este texto e clique com o botão direito.
+1. [] Escolha "Chat" ou pressione `Alt+/`.
+1. [] No inline chat, digite: `Update this razor to have a simple spinner style, using built in bootstrap styles.`
 
-    ![Screenshot of VS with inline chat](./images/2-inline-code.png)
+    ![Captura de tela do VS com inline chat](./images/2-inline-code.png)
 
-1. [] Select **Tab** to accept the changes, and it should look similar to:  
+1. [] Selecione **Tab** para aceitar as alterações, e o resultado deve ser semelhante a:  
 
     ```html
     <div class="spinner-border text-primary" role="status">
@@ -20,12 +20,12 @@ Now, you'll improve the loading experience using Copilot's inline chat.
     </div>
     ```
 
-1. [] Run the application to see your new loading spinner in action.
+1. [] Execute o aplicativo para ver o novo spinner de carregamento em ação.
 
-1. [] Stop debugging and close the application
+1. [] Pare a depuração e feche o aplicativo
 
-**Key Takeaway**: Inline chat allows you to make targeted improvements to your code without leaving your editor context.
+**Conclusão Principal**: O inline chat permite que você faça melhorias pontuais no seu código sem sair do contexto do editor.
 
 ---
 
-[Back: Part 01 - Code Completion with Ghost Text](./part01-code-completion.md) | [Next: Part 03 - Referencing Code Files in Chat](./part03-referencing-files.md)
+[Voltar: Parte 01 - Completação de Código com Ghost Text](./part01-code-completion.md) | [Próximo: Parte 03 - Referenciando Arquivos de Código no Chat](./part03-referencing-files.md)

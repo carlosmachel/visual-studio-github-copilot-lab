@@ -1,28 +1,28 @@
-# Part 10: Planning Mode in Agent
+# Parte 10: Modo de Planejamento no Agente
 
-When working on complex features, it's helpful to plan before diving into implementation. GitHub Copilot's Planning Mode in Agent allows you to create a structured plan for implementing new features. This helps ensure you understand the full scope of changes needed before any code is generated.
+Ao trabalhar em funcionalidades complexas, é útil planejar antes de começar a implementação. O Modo de Planejamento do GitHub Copilot no Agente permite que você crie um plano estruturado para implementar novas funcionalidades. Isso ajuda a garantir que você entenda o escopo completo das alterações necessárias antes que qualquer código seja gerado.
 
-In this part, you'll use Planning Mode to plan and implement a feature that allows users to navigate directly to a specific product's detail page.
+Nesta parte, você usará o Modo de Planejamento para planejar e implementar uma funcionalidade que permite aos usuários navegar diretamente para a página de detalhes de um produto específico.
 
-## Understanding Planning Mode
+## Entendendo o Modo de Planejamento
 
-Planning Mode is a feature in Agent that helps you:
-- Break down complex features into manageable steps
-- Understand all the files and changes required before implementation
-- Review and refine the plan before Copilot starts generating code
+O Modo de Planejamento é um recurso no Agente que ajuda você a:
+- Dividir funcionalidades complexas em etapas gerenciáveis
+- Entender todos os arquivos e alterações necessárias antes da implementação
+- Revisar e refinar o plano antes que o Copilot comece a gerar código
 
-## Creating a Plan for Product Navigation
+## Criando um Plano para Navegação de Produtos
 
-Let's use Planning Mode to implement a feature that allows users to click on a product in the listing page and navigate to a dedicated product detail page.
+Vamos usar o Modo de Planejamento para implementar uma funcionalidade que permite aos usuários clicar em um produto na página de listagem e navegar para uma página de detalhes dedicada ao produto.
 
-1. [] Open the Copilot Chat window if it's not already open.
-1. [] Create a new chat session.
-1. [] Switch to **Agent** mode.
-1. [] Ensure **Planning** is enabled in the tools.
+1. [] Abra a janela do Copilot Chat, se ainda não estiver aberta.
+1. [] Crie uma nova sessão de chat.
+1. [] Mude para o modo **Agent**.
+1. [] Certifique-se de que o **Planning** está ativado nas ferramentas.
 
-   ![Planning Mode enabled](./images/10-planning-mode.png)
+   ![Modo de Planejamento ativado](./images/10-planning-mode.png)
 
-1. [] Enter the following prompt:
+1. [] Insira o seguinte prompt:
 
    ```
    Create a plan for the following: I want to add product navigation to the TinyShop application. When a user clicks on a product in the product listing page, they should be taken to a new product detail page that shows:
@@ -35,49 +35,49 @@ Let's use Planning Mode to implement a feature that allows users to click on a p
    The URL should be /product/{id} where id is the product ID.
    ```
 
-1. [] Review the plan that Copilot generates. It should include:
-   - Creating a new `ProductDetail.razor` component
-   - Updating routing configuration
-   - Modifying the product listing to include navigation links
-   - Adding any necessary CSS styling
+1. [] Revise o plano que o Copilot gera. Ele deve incluir:
+   - Criação de um novo componente `ProductDetail.razor`
+   - Atualização da configuração de roteamento
+   - Modificação da listagem de produtos para incluir links de navegação
+   - Adição de qualquer estilo CSS necessário
    - Etc.
 
-   ![Generated Plan](./images/10-generated-plan.png)
+   ![Plano Gerado](./images/10-generated-plan.png)
 
-1. [] If the plan looks good, click **Execute Plan** to begin implementation.
-1. [] If you want to modify the plan, you can add additional instructions or ask Copilot to revise specific steps.
+1. [] Se o plano parecer bom, clique em **Execute Plan** para iniciar a implementação.
+1. [] Se quiser modificar o plano, você pode adicionar instruções adicionais ou pedir ao Copilot que revise etapas específicas.
 
-## Reviewing and Refining the Plan
+## Revisando e Refinando o Plano
 
-Before executing, it's a good practice to review the plan carefully:
+Antes de executar, é uma boa prática revisar o plano cuidadosamente:
 
-1. [] Check that all necessary files are included in the plan.
-1. [] Verify the approach aligns with your project structure and coding standards.
-1. [] Add any missing requirements by typing additional instructions.
+1. [] Verifique se todos os arquivos necessários estão incluídos no plano.
+1. [] Verifique se a abordagem está alinhada com a estrutura do seu projeto e os padrões de codificação.
+1. [] Adicione quaisquer requisitos ausentes digitando instruções adicionais.
 
-For example, you might add:
+Por exemplo, você pode adicionar:
 
 ```
 Update the plan to also ensure the product detail page handles cases where the product ID doesn't exist by showing a "Product not found" message.
 ```
 
-## Executing the Plan
+## Executando o Plano
 
-1. [] Once you're satisfied with the plan, tell copilot to **Execute Plan**.
-1. [] Copilot will implement each step of the plan, creating and modifying files as needed.
-1. [] Review the changes in the editor as they're made.
-1. [] Run the application to test the new product navigation feature.
+1. [] Uma vez satisfeito com o plano, diga ao copilot para **Execute Plan**.
+1. [] O Copilot implementará cada etapa do plano, criando e modificando arquivos conforme necessário.
+1. [] Revise as alterações no editor conforme são feitas.
+1. [] Execute o aplicativo para testar a nova funcionalidade de navegação de produtos.
 
-## Testing the Feature
+## Testando a Funcionalidade
 
-1. [] Start the application with F5 or Debug -> Start Debugging.
-1. [] Navigate to the Products page.
-1. [] Click on a product in the listing.
-1. [] Verify that you're taken to the product detail page with the correct information.
-1. [] Click the "Back to Products" button to return to the listing.
+1. [] Inicie o aplicativo com F5 ou Debug -> Start Debugging.
+1. [] Navegue até a página de Produtos.
+1. [] Clique em um produto na listagem.
+1. [] Verifique se você é levado à página de detalhes do produto com as informações corretas.
+1. [] Clique no botão "Back to Products" para retornar à listagem.
 
-**Key Takeaway**: Planning Mode helps you think through complex features before implementation. By creating a structured plan, you can ensure all necessary changes are considered and review the approach before any code is generated. This leads to better-organized code and fewer iterations.
+**Conclusão Principal**: O Modo de Planejamento ajuda você a pensar em funcionalidades complexas antes da implementação. Ao criar um plano estruturado, você pode garantir que todas as alterações necessárias sejam consideradas e revisar a abordagem antes que qualquer código seja gerado. Isso leva a um código melhor organizado e menos iterações.
 
 ---
 
-[Back: Part 09 - MCP Servers](./part09-mcp.md) | [Next: Part 11 - Reusable Prompt Files](./part11-reusable-prompts.md)
+[Voltar: Parte 09 - Servidores MCP](./part09-mcp.md) | [Próximo: Parte 11 - Arquivos de Prompt Reutilizáveis](./part11-reusable-prompts.md)

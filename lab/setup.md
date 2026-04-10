@@ -1,95 +1,95 @@
-# Workshop Setup
+# Configuração do Workshop
 
-To complete this workshop you will need Visual Studio 2026, the .NET 10 SDK, and a GitHub account with access to GitHub Copilot.
+Para completar este workshop você precisará do Visual Studio 2026, do .NET 10 SDK e de uma conta no GitHub com acesso ao GitHub Copilot.
 
-## Prerequisites
+## Pré-requisitos
 
-Before starting, ensure you have:
+Antes de começar, certifique-se de ter:
 
-- **Visual Studio 2026** with the GitHub Copilot extension installed
-- **.NET 10 SDK** installed
-- **GitHub account** with one of the following:
-  - [GitHub Copilot Free](https://github.com/features/copilot) - Free tier with limited usage
-  - [GitHub Copilot Pro](https://github.com/features/copilot) - Full access (30-day free trial available)
-  - GitHub Copilot through your organization
-
-> [!TIP]
-> If you don't have GitHub Copilot yet, you can [sign up for Copilot Free](https://github.com/features/copilot) or start a [free trial of Copilot Pro](https://github.com/github-copilot/signup).
-
-## Install .github + MCP Extension
-
-Before we begin, let's install the .github + MCP extension for Visual Studio. This extension provides access to GitHub MCP servers which we will use later in the lab.
-
-1. [] Open Visual Studio 2026
-1. [] Go to **Extensions -> Manage Extensions**
-1. [] Search for **.github + MCP** in the search box
-1. [] Click **Install** on the **.github + MCP** extension by Mads Kristensen
-1. [] Restart Visual Studio if prompted
+- **Visual Studio 2026** com a extensão GitHub Copilot instalada
+- **.NET 10 SDK** instalado
+- **Conta no GitHub** com uma das seguintes opções:
+  - [GitHub Copilot Free](https://github.com/features/copilot) - Versão gratuita com uso limitado
+  - [GitHub Copilot Pro](https://github.com/features/copilot) - Acesso completo (teste gratuito de 30 dias disponível)
+  - GitHub Copilot através da sua organização
 
 > [!TIP]
-> You can also install this extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.GitHubNode). The .github + MCP extension is important because it provides the Node.js runtime required by some MCP servers, which you'll use in Part 9 of this lab.
+> Se você ainda não tem o GitHub Copilot, pode [se inscrever no Copilot Free](https://github.com/features/copilot) ou iniciar um [teste gratuito do Copilot Pro](https://github.com/github-copilot/signup).
 
-## Sign in to GitHub Copilot
+## Instalar a Extensão .github + MCP
 
-1. [] Open your browser and go to `https://github.com`.
-1. [] Sign in with your GitHub account or create a new account if you don't have one.
-1. [] Open Visual Studio 2026.
-1. [] Select **Continue without code**. If prompted to sign-in, you can click Close.
-1. [] Click the Copilot icon on the top bar (left side next to the search input box).
-1. [] Click **Sign in to use Copilot**.
-1. [] A browser window will open prompting you to sign in to GitHub and authorize Visual Studio and Copilot. Complete the sign-in and click **Authorize** when prompted.
-1. [] When the browser shows the confirmation, click **Open** to return to Visual Studio.
-1. [] After setup you should see the **GitHub Copilot Walkthrough** tab and the Copilot button should be green.
+Antes de começarmos, vamos instalar a extensão .github + MCP para o Visual Studio. Esta extensão fornece acesso aos servidores GitHub MCP que usaremos mais adiante no laboratório.
+
+1. [] Abra o Visual Studio 2026
+1. [] Vá em **Extensions -> Manage Extensions**
+1. [] Pesquise por **.github + MCP** na caixa de pesquisa
+1. [] Clique em **Install** na extensão **.github + MCP** de Mads Kristensen
+1. [] Reinicie o Visual Studio se solicitado
+
+> [!TIP]
+> Você também pode instalar esta extensão pelo [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.GitHubNode). A extensão .github + MCP é importante pois fornece o runtime Node.js necessário para alguns servidores MCP, que você usará na Parte 9 deste laboratório.
+
+## Entrar no GitHub Copilot
+
+1. [] Abra seu navegador e acesse `https://github.com`.
+1. [] Entre com sua conta do GitHub ou crie uma nova conta caso não tenha.
+1. [] Abra o Visual Studio 2026.
+1. [] Selecione **Continue without code**. Se solicitado para entrar, você pode clicar em Fechar.
+1. [] Clique no ícone do Copilot na barra superior (lado esquerdo, ao lado da caixa de pesquisa).
+1. [] Clique em **Sign in to use Copilot**.
+1. [] Uma janela do navegador será aberta pedindo para você entrar no GitHub e autorizar o Visual Studio e o Copilot. Conclua o login e clique em **Authorize** quando solicitado.
+1. [] Quando o navegador mostrar a confirmação, clique em **Open** para retornar ao Visual Studio.
+1. [] Após a configuração, você deverá ver a aba **GitHub Copilot Walkthrough** e o botão do Copilot deverá estar verde.
 
 > [!NOTE]
-> For the hands-on lab exercises that create or modify repository data via cloud agents (Part 12), you'll need to fork the lab repo into your own account. This gives the cloud agent permissions to operate on your fork.
+> Para os exercícios práticos que criam ou modificam dados do repositório via agentes na nuvem (Parte 12), você precisará fazer um fork do repositório do laboratório na sua própria conta. Isso dá ao agente na nuvem permissões para operar no seu fork.
 
-## Turn on Copilot Settings
+## Ativar Configurações do Copilot
 
-1. [] Ensure Code Completions and Next Edit Suggestions are enabled:
-   - Go to the Code Completions settings in Visual Studio by heading to **Tools -> Options -> Text Editor -> Code Completions**
-   - Ensure **Copilot Completions** is checked.
-   - Ensure **Copilot Next Edit Suggestions** is checked.
+1. [] Certifique-se de que as Completações de Código e as Sugestões de Próxima Edição estão ativadas:
+   - Vá às configurações de Completações de Código no Visual Studio em **Tools -> Options -> Text Editor -> Code Completions**
+   - Certifique-se de que **Copilot Completions** está marcado.
+   - Certifique-se de que **Copilot Next Edit Suggestions** está marcado.
 
    ![](./images/0-enable-nes.png)
 
-1. [] Head to **Tools -> Options -> GitHub -> Copilot -> Copilot Chat** and ensure the following settings are enabled:
+1. [] Vá para **Tools -> Options -> GitHub -> Copilot -> Copilot Chat** e certifique-se de que as seguintes configurações estão ativadas:
    - **Enable Planning**
    - **Enable View Plan Execution**
    - **Enable Copilot Coding agent (Preview)**
 
 
-## Clone Lab Repository
+## Clonar o Repositório do Laboratório
 
-For the full experience—especially if you plan to delegate tasks to cloud agents or allow Copilot to create issues and push changes—fork the repository to your own GitHub account and clone your fork.
+Para a experiência completa — especialmente se você planeja delegar tarefas a agentes na nuvem ou permitir que o Copilot crie issues e envie alterações — faça um fork do repositório para sua própria conta no GitHub e clone o seu fork.
 
-1. [] In your browser, go to `https://github.com/dotnet-presentations/visual-studio-github-copilot-lab` and click **Fork** to create a fork under your GitHub account.
-1. [] In Visual Studio, click **File -> Clone Repository**.
-1. [] Enter the URL of your fork (for example `https://github.com/<your-username>/visual-studio-github-copilot-lab`) and press **Clone**.
+1. [] No seu navegador, acesse `https://github.com/dotnet-presentations/visual-studio-github-copilot-lab` e clique em **Fork** para criar um fork na sua conta do GitHub.
+1. [] No Visual Studio, clique em **File -> Clone Repository**.
+1. [] Insira a URL do seu fork (por exemplo `https://github.com/<seu-usuario>/visual-studio-github-copilot-lab`) e pressione **Clone**.
 
-If you prefer not to fork, you can still clone the upstream repository directly:
+Se preferir não fazer um fork, você ainda pode clonar o repositório original diretamente:
 
-1. [] In Visual Studio, click **File -> Clone Repository**.
-1. [] Enter `https://github.com/dotnet-presentations/visual-studio-github-copilot-lab` and press **Clone**.
+1. [] No Visual Studio, clique em **File -> Clone Repository**.
+1. [] Insira `https://github.com/dotnet-presentations/visual-studio-github-copilot-lab` e pressione **Clone**.
 
-The code is now opened in Visual Studio. Feel free to take a look at it or skip to the next section to start the app.
+O código agora está aberto no Visual Studio. Fique à vontade para explorá-lo ou pule para a próxima seção para iniciar o aplicativo.
 
-## Start the App
+## Iniciar o Aplicativo
 
-1. [] Open the **Solution Explorer** from the **View -> Solution Explorer** menu.
-1. [] Set the **TinyShop.AppHost** as the startup project if it isn't already by right-clicking on **TinyShop.AppHost** and selecting **Set as Startup Project**. Start the project with F5 or **Debug -> Start Debugging** from the menu.
+1. [] Abra o **Solution Explorer** pelo menu **View -> Solution Explorer**.
+1. [] Defina o **TinyShop.AppHost** como projeto de inicialização, se ainda não estiver, clicando com o botão direito em **TinyShop.AppHost** e selecionando **Set as Startup Project**. Inicie o projeto com F5 ou **Debug -> Start Debugging** no menu.
 
-    The .NET Aspire AppHost will start two applications and the .NET Aspire Dashboard:
+    O .NET Aspire AppHost iniciará dois aplicativos e o .NET Aspire Dashboard:
 
-    - The backend .NET app on **https://localhost:7130/api/Product**
-    - The frontend Blazor app on **https://localhost:7085** - You can see the app by opening that URL from the dashboard
+    - O aplicativo .NET backend em **https://localhost:7130/api/Product**
+    - O aplicativo Blazor frontend em **https://localhost:7085** - Você pode ver o aplicativo abrindo essa URL a partir do painel
 
-1. [] Stop debugging and close the application.
+1. [] Pare a depuração e feche o aplicativo.
 
-## Summary and Next Steps
+## Resumo e Próximos Passos
 
-You've now set up your environment and cloned the repository you'll use for the rest of the workshop. Let's start exploring GitHub Copilot!
+Você configurou seu ambiente e clonou o repositório que usará durante todo o workshop. Vamos começar a explorar o GitHub Copilot!
 
 ---
 
-[Next: Part 00 - Exploring the Codebase](./part00-exploring-codebase.md)
+[Próximo: Parte 00 - Explorando o Código](./part00-exploring-codebase.md)

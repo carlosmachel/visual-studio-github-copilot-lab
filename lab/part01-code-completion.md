@@ -1,42 +1,42 @@
-# Part 01: Code Completion with Ghost Text
+# Parte 01: Completação de Código com Ghost Text
 
-In this section, you'll use GitHub Copilot's code completion to implement API endpoints.
+Nesta seção, você usará a completação de código do GitHub Copilot para implementar endpoints de API.
 
-> IMPORTANT: For this exercise, **DO NOT** copy and paste the code snippet provided, but rather type it manually. This will allow you to experience code completion as you would if you were coding back at your desk. You'll likely see you only have to type a few characters before GitHub Copilot begins suggesting the rest.
+> IMPORTANTE: Para este exercício, **NÃO** copie e cole o trecho de código fornecido, mas sim o digite manualmente. Isso permitirá que você experiencie a completação de código como faria ao programar no seu dia a dia. Você provavelmente verá que precisa digitar apenas alguns caracteres antes que o GitHub Copilot comece a sugerir o restante.
 
-1. [] Stop debugging the application if it is currently running.
+1. [] Pare a depuração do aplicativo se estiver em execução.
 
 
-1. [] In the Solution Explorer, in the **Products** project, open **Endpoints/ProductEndpoints.cs** - it will have a single endpoint implemented.
+1. [] No Solution Explorer, no projeto **Products**, abra **Endpoints/ProductEndpoints.cs** — ele terá um único endpoint implementado.
 
-   > Note: GitHub Copilot will not give code suggestions when debugging.
+   > Nota: O GitHub Copilot não fornecerá sugestões de código durante a depuração.
    
-1. [] Let's implement a new **MapGet** to get product details for a specific **id**. Move our cursor and click on line 20 under the existing **/** endpoint. Text suggestion may appear or type:
+1. [] Vamos implementar um novo **MapGet** para obter detalhes de um produto por **id**. Mova o cursor e clique na linha 20, abaixo do endpoint **/** existente. Uma sugestão pode aparecer ou digite:
    ```csharp
    g
    ```
-1. [] Wait for the ghost text suggestions to appear (gray text).
+1. [] Aguarde as sugestões do ghost text aparecerem (texto cinza).
 ;
-   ![Code suggestions](./images/1-ghost-text.png)
+   ![Sugestões de código](./images/1-ghost-text.png)
 
-1. [] Press Tab to accept the suggestion or continue typing to get more specific suggestions.
+1. [] Pressione Tab para aceitar a sugestão ou continue digitando para obter sugestões mais específicas.
 
-1. [] From there Next Edit Suggetions (NES) or addtional Ghost Text suggestions will appear. 
+1. [] A partir daí, as Sugestões de Próxima Edição (NES) ou sugestões adicionais de Ghost Text aparecerão.
 
-   ![NES showing up](./images/1-nes.png)
+   ![NES aparecendo](./images/1-nes.png)
 
-1. [] We now can implement the following endpoints using GitHub Copilot:
-   - POST to create a new product
-   - PUT to update a product
-   - DELETE to remove a product
+1. [] Agora podemos implementar os seguintes endpoints usando o GitHub Copilot:
+   - POST para criar um novo produto
+   - PUT para atualizar um produto
+   - DELETE para remover um produto
 
-   - We can continue to use suggestions OR we could open GitHub Copilot Chat and work with Agent mode:
-     - Open GitHub Copilot Chat in the top-right corner of Visual Studio and select **Open Chat Window** or press `Ctrl+\+C` if Copilot chat isn't open.
-     - Switch to **Agent** mode.
-     - ![Switch to agent mode](./images/1-agent.png)]
-     - Ask the agent: `Can you implement the rest of the endpoints for the Product API and also implement the ProductService to call these new endpoints in the Store project?`
+   - Podemos continuar usando as sugestões OU abrir o GitHub Copilot Chat e trabalhar no modo Agente:
+     - Abra o GitHub Copilot Chat no canto superior direito do Visual Studio e selecione **Open Chat Window** ou pressione `Ctrl+\+C` se o chat do Copilot não estiver aberto.
+     - Mude para o modo **Agent**.
+     - ![Mudar para o modo agente](./images/1-agent.png)]
+     - Pergunte ao agente: `Can you implement the rest of the endpoints for the Product API and also implement the ProductService to call these new endpoints in the Store project?`
 
-   The end code in **ProductEndpoints.cs** should look similar to:
+   O código final em **ProductEndpoints.cs** deve ser semelhante a:
 
    ```csharp
    group.MapGet("/", async (ProductDataContext db) =>
@@ -98,7 +98,7 @@ In this section, you'll use GitHub Copilot's code completion to implement API en
    .Produces(StatusCodes.Status404NotFound);
    ```
 
-   In the **Store** project in the solution explorer open **Services/ProductService.cs**, the code sould look similar to:
+   No projeto **Store** no Solution Explorer, abra **Services/ProductService.cs**, o código deve ser semelhante a:
 
    ```cs
    using DataEntities;
@@ -160,25 +160,25 @@ In this section, you'll use GitHub Copilot's code completion to implement API en
    }
    ```
 
-   > NOTE: Because LLMs are probabilistic, not deterministic, the exact code generated can vary. The above is a representative example. If your code is different, that's just fine as long as it works!
+   > NOTA: Como os LLMs são probabilísticos, não determinísticos, o código exato gerado pode variar. O acima é um exemplo representativo. Se o seu código for diferente, está tudo bem, desde que funcione!
 
-1. Click on **Keep** after reviewing changes in the GitHub Copilot Chat window.
+1. Clique em **Keep** após revisar as alterações na janela do GitHub Copilot Chat.
 
-1. [] Go back to **ProductEndpoints.cs**, and try changing the variable name of **id** to `productId` in the new **MapGet** method and see Next Edit Suggestions help out.
+1. [] Volte ao **ProductEndpoints.cs** e tente mudar o nome da variável **id** para `productId` no novo método **MapGet** e veja as Sugestões de Próxima Edição ajudando.
 
-   ![NES suggestions more](./images/1-nes-2.png)
+   ![Mais sugestões NES](./images/1-nes-2.png)
 
-1. [] Try using documentation generation:
-   - Type `///` above a method to generate XML documentation on the **MapProductEndpoints** this can also be brought up with `Alt+/` for inline and then entering **/** which will bring up a list of commands. The documentation generation will appear as ghost text and can be accepted with `Tab`.
+1. [] Experimente a geração de documentação:
+   - Digite `///` acima de um método para gerar documentação XML no **MapProductEndpoints**; isso também pode ser acionado com `Alt+/` para inline e depois inserindo **/** que mostrará uma lista de comandos. A geração de documentação aparecerá como ghost text e pode ser aceita com `Tab`.
 
-   ![documentation generation by Copilot](./images/1-docs.png)
+   ![Geração de documentação pelo Copilot](./images/1-docs.png)
 
-1. [] Test your implementation:
-   - Run the AppHost project.
-   - Test your new endpoints by going to **https://localhost:7130/api/Product/1**
+1. [] Teste sua implementação:
+   - Execute o projeto AppHost.
+   - Teste seus novos endpoints acessando **https://localhost:7130/api/Product/1**
 
-1. [] Stop debugging and close the application
+1. [] Pare a depuração e feche o aplicativo
 
 ---
 
-[Back: Part 00 - Exploring the Codebase with GitHub Copilot Chat](./part00-exploring-codebase.md) | [Next: Part 02 - Enhancing UI with Inline Chat](./part02-enhancing-ui.md)
+[Voltar: Parte 00 - Explorando o Código com GitHub Copilot Chat](./part00-exploring-codebase.md) | [Próximo: Parte 02 - Aprimorando a Interface com Inline Chat](./part02-enhancing-ui.md)

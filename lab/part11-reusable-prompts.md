@@ -1,39 +1,39 @@
-﻿# Part 11: Reusable Prompt Files
+﻿# Parte 11: Arquivos de Prompt Reutilizáveis
 
-Prompt files are a powerful way to create standardized, reusable prompts that can be shared across your team. They help ensure consistency in how you interact with GitHub Copilot and can encode best practices for common tasks like code generation, testing, and documentation.
+Os arquivos de prompt são uma maneira poderosa de criar prompts padronizados e reutilizáveis que podem ser compartilhados com toda a sua equipe. Eles ajudam a garantir consistência na forma como você interage com o GitHub Copilot e podem incorporar as melhores práticas para tarefas comuns como geração de código, testes e documentação.
 
-In this part, you'll create a reusable prompt file for generating unit tests and use it to add tests to the existing TinyShop.Tests project.
+Nesta parte, você criará um arquivo de prompt reutilizável para gerar testes unitários e o usará para adicionar testes ao projeto TinyShop.Tests existente.
 
-## Understanding Prompt Files
+## Entendendo os Arquivos de Prompt
 
-Prompt files are markdown files stored in the `.github/prompts` folder of your repository. They:
-- Can be invoked by name in Copilot Chat
-- Are shared with your entire team through source control
-- Can include placeholders for dynamic content
-- Help standardize common development tasks
+Os arquivos de prompt são arquivos markdown armazenados na pasta `.github/prompts` do seu repositório. Eles:
+- Podem ser invocados pelo nome no Copilot Chat
+- São compartilhados com toda a sua equipe através do controle de versão
+- Podem incluir espaços reservados para conteúdo dinâmico
+- Ajudam a padronizar tarefas comuns de desenvolvimento
 
-## Exploring the Test Project
+## Explorando o Projeto de Testes
 
-The solution already includes a **TinyShop.Tests** project with MSTest configured. Let's take a look at what's there.
+A solução já inclui um projeto **TinyShop.Tests** com o MSTest configurado. Vamos dar uma olhada no que está disponível.
 
-1. [] In **Solution Explorer**, expand the **TinyShop.Tests** project.
-1. [] Open **ProductTests.cs** to see the existing reference test.
-1. [] Notice the test follows the Arrange-Act-Assert pattern and verifies default values for a new Product instance.
+1. [] No **Solution Explorer**, expanda o projeto **TinyShop.Tests**.
+1. [] Abra **ProductTests.cs** para ver o teste de referência existente.
+1. [] Observe que o teste segue o padrão Arrange-Act-Assert e verifica os valores padrão de uma nova instância de Product.
 
-## Creating a Unit Test Prompt File
+## Criando um Arquivo de Prompt para Testes Unitários
 
-Now let's create a prompt file that helps generate additional unit tests using MSTest.
+Agora vamos criar um arquivo de prompt que ajuda a gerar testes unitários adicionais usando o MSTest.
 
-1. [] In **Solution Explorer** we will see the **GitHub** node from the extension to add it easily:
-   - Right-Click the **GitHub** node icon/extension in Visual Studio.
-   - Choose **Add Copilot File...**.
-   - Select **Prompt file...** from the dialog.
-   - Change the file name to `unit-test.prompt.md` and click **OK**.
-   - The new file will open in the editor; paste the content shown below into the file and save it.
+1. [] No **Solution Explorer** veremos o nó **GitHub** da extensão para adicioná-lo facilmente:
+   - Clique com o botão direito no ícone/extensão do nó **GitHub** no Visual Studio.
+   - Escolha **Add Copilot File...**.
+   - Selecione **Prompt file...** no diálogo.
+   - Altere o nome do arquivo para `unit-test.prompt.md` e clique em **OK**.
+   - O novo arquivo abrirá no editor; cole o conteúdo mostrado abaixo no arquivo e salve.
 
-1. [] If you can create the file manually in file explorer, add a new file named `unit-test.prompt.md` under `.github/prompts` and paste the content below.
+1. [] Se você puder criar o arquivo manualmente no explorador de arquivos, adicione um novo arquivo chamado `unit-test.prompt.md` em `.github/prompts` e cole o conteúdo abaixo.
 
-1. [] Update the prompt file with the following content:
+1. [] Atualize o arquivo de prompt com o seguinte conteúdo:
 
    ```markdown
    ---
@@ -66,27 +66,27 @@ Now let's create a prompt file that helps generate additional unit tests using M
    Generate tests for: ${input:Describe what you want to test}
    ```
 
-1. [] Save the file.
+1. [] Salve o arquivo.
 
-## Using the Reusable Prompt
+## Usando o Prompt Reutilizável
 
-Now let's use our new prompt file to generate additional unit tests for the Product class.
+Agora vamos usar nosso novo arquivo de prompt para gerar testes unitários adicionais para a classe Product.
 
-1. [] In Copilot Chat, type `/` to see available prompt files.
-1. [] Select `unit-test` from the list of available prompts.
-1. [] When prompted for input, type: `the Product class in DataEntities, including tests for setting and getting each property, and tests using DataRow for multiple values`
+1. [] No Copilot Chat, digite `/` para ver os arquivos de prompt disponíveis.
+1. [] Selecione `unit-test` da lista de prompts disponíveis.
+1. [] Quando solicitado para entrada, digite: `the Product class in DataEntities, including tests for setting and getting each property, and tests using DataRow for multiple values`
 
-   ![Using a prompt file](./images/11-prompt-file.png)
+   ![Usando um arquivo de prompt](./images/11-prompt-file.png)
 
-1. [] Review the generated tests. They should include:
-   - Tests for each property (Name, Description, Price, ImageUrl)
-   - Tests using DataRow for parameterized testing
-   - Proper test method naming following the pattern
-   - Comments explaining test purposes
+1. [] Revise os testes gerados. Eles devem incluir:
+   - Testes para cada propriedade (Name, Description, Price, ImageUrl)
+   - Testes usando DataRow para testes parametrizados
+   - Nomenclatura adequada dos métodos de teste seguindo o padrão
+   - Comentários explicando os propósitos dos testes
 
-## Example Generated Tests
+## Exemplo de Testes Gerados
 
-The generated tests should look similar to:
+Os testes gerados devem ser semelhantes a:
 
 ```csharp
 [TestMethod]
@@ -137,15 +137,15 @@ public void ImageUrl_SetValue_ReturnsExpectedValue(string imageUrl)
 }
 ```
 
-## Running the Tests
+## Executando os Testes
 
-1. [] Open **Test Explorer** from **Test -> Test Explorer**.
-1. [] Build the solution to discover the tests.
-1. [] Click **Run All** to run all tests including the new generated tests.
-1. [] Verify that all tests pass.
+1. [] Abra o **Test Explorer** em **Test -> Test Explorer**.
+1. [] Compile a solução para descobrir os testes.
+1. [] Clique em **Run All** para executar todos os testes, incluindo os novos testes gerados.
+1. [] Verifique se todos os testes passam.
 
-**Key Takeaway**: Reusable prompt files help standardize how your team uses GitHub Copilot. By creating prompts for common tasks like unit testing, you ensure consistency and encode best practices that everyone on the team can benefit from.
+**Conclusão Principal**: Os arquivos de prompt reutilizáveis ajudam a padronizar como sua equipe usa o GitHub Copilot. Ao criar prompts para tarefas comuns como testes unitários, você garante consistência e incorpora as melhores práticas das quais todos na equipe podem se beneficiar.
 
 ---
 
-[Back: Part 10 - Planning Mode in Agent](./part10-planning-mode.md) ← | [Next: Part 12 - Delegate to the Cloud](./part12-delegate-to-cloud.md) →
+[Voltar: Parte 10 - Modo de Planejamento no Agente](./part10-planning-mode.md) ← | [Próximo: Parte 12 - Delegar para a Nuvem](./part12-delegate-to-cloud.md) →
