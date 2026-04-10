@@ -608,8 +608,25 @@
             }
         }
 
-        // Track which base path worked for fetching markdown
-        let markdownBasePath = 'lab/';
+        // Track which base path worked for fetching markdown (cached after first detection)
+        let markdownBasePath = null;
+
+        // Detect the correct base path for markdown files
+        async function detectMarkdownBasePath() {
+            if (markdownBasePath !== null) {
+                return markdownBasePath; // Use cached value
+            }
+            
+            // Try ../lab/ first (for local development)
+            const testResponse = await fetch('../lab/setup.md').catch(() => ({ ok: false }));
+            if (testResponse.ok) {
+                markdownBasePath = '../lab/';
+            } else {
+                // Fall back to lab/ (for GitHub Pages deployment)
+                markdownBasePath = 'lab/';
+            }
+            return markdownBasePath;
+        }
 
         // Process markdown - fix image paths and handle special syntax
         function processMarkdown(md) {
@@ -645,16 +662,14 @@
             document.title = `${step.title} | VS GitHub Copilot Lab`;
 
             try {
-                // Try fetching from ../lab/ first (for local development)
-                // Then fall back to lab/ (for GitHub Pages deployment)
-                let response = await fetch(`../lab/${step.file}`);
-                if (response.ok) {
-                    markdownBasePath = '../lab/';
-                } else {
-                    response = await fetch(`lab/${step.file}`);
-                    markdownBasePath = 'lab/';
+                // Detect the correct base path (cached after first call)
+                await detectMarkdownBasePath();
+                
+                // Fetch markdown using detected base path
+                const response = await fetch(`${markdownBasePath}${step.file}`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${step.file} from ${markdownBasePath}`);
                 }
-                if (!response.ok) throw new Error('Failed to load');
                 
                 let md = await response.text();
                 md = processMarkdown(md);
@@ -667,9 +682,11 @@
 
                 document.getElementById('markdown-content').innerHTML = marked.parse(md);
             } catch (error) {
+                console.error('Error loading markdown:', error);
                 document.getElementById('markdown-content').innerHTML = `
                     <h1>Error Loading Content</h1>
-                    <p>Could not load ${step.file}. Please check that the file exists.</p>
+                    <p>Could not load ${step.file}. Please check that the file exists in the lab folder.</p>
+                    <p>Error details: ${error.message || 'Unknown error'}</p>
                     <p><a href="index.html">Return to home</a></p>
                 `;
             }
