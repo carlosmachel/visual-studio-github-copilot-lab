@@ -63,14 +63,14 @@ Antes de começarmos, vamos instalar a extensão .github + MCP para o Visual Stu
 
 Para a experiência completa — especialmente se você planeja delegar tarefas a agentes na nuvem ou permitir que o Copilot crie issues e envie alterações — faça um fork do repositório para sua própria conta no GitHub e clone o seu fork.
 
-1. [] No seu navegador, acesse `https://github.com/dotnet-presentations/visual-studio-github-copilot-lab` e clique em **Fork** para criar um fork na sua conta do GitHub.
+1. [] No seu navegador, acesse `https://github.com/carlosmachel/visual-studio-github-copilot-lab` e clique em **Fork** para criar um fork na sua conta do GitHub.
 1. [] No Visual Studio, clique em **File -> Clone Repository**.
 1. [] Insira a URL do seu fork (por exemplo `https://github.com/<seu-usuario>/visual-studio-github-copilot-lab`) e pressione **Clone**.
 
 Se preferir não fazer um fork, você ainda pode clonar o repositório original diretamente:
 
 1. [] No Visual Studio, clique em **File -> Clone Repository**.
-1. [] Insira `https://github.com/dotnet-presentations/visual-studio-github-copilot-lab` e pressione **Clone**.
+1. [] Insira `https://github.com/carlosmachel/visual-studio-github-copilot-lab` e pressione **Clone**.
 
 O código agora está aberto no Visual Studio. Fique à vontade para explorá-lo ou pule para a próxima seção para iniciar o aplicativo.
 
